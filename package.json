@@ -1,0 +1,39 @@
+{
+  "name": "luacheck",
+  "version": "0.1.0",
+  "description": "luacheck bindings for Node.JS",
+  "keywords": [
+    "luacheck",
+    "lint",
+    "bindings"
+  ],
+  "author": "Radu Dan <za_creature@yahoo.com> (https://github.com/za-creature)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/za-creature/node-luacheck.git"
+  },
+  "bugs": {
+    "url": "https://github.com/za-creature/node-luacheck/issues"
+  },
+  "homepage": "https://github.com/za-creature/node-luacheck",
+  "license": "MIT",
+  "main": "lib",
+  "scripts": {
+    "prepublish": "coffee -o lib -c src",
+    "test": "mocha --options mocha.opts tests"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.3",
+    "mocha": "^2.2.5"
+  },
+  "engines": {
+    "npm": "*",
+    "node": "*",
+    "coffee-script": "^1.9.3"
+  }
+}
