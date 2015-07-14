@@ -33,6 +33,7 @@ The `options` argument is a dictionary that accepts the following keys:
 #### `cwd`
 
 Type: `String`
+
 Default: `undefined`
 
 By default `luacheck` is executed from the source file's directory to work
@@ -46,6 +47,7 @@ directory, not `cwd`.
 #### `exec`
 
 Type: `String`
+
 Default: `undefined`
 
 If set, it should be a directory that contains `luacheck` (or `luacheck.bat` on
@@ -56,6 +58,7 @@ Windows). Useful if for whatever reason you can't have it added to your `PATH`.
 #### `noGlobal`
 
 Type: `Boolean`
+
 Default: `false`
 
 Filter out warnings related to global variables.
@@ -65,6 +68,7 @@ Filter out warnings related to global variables.
 #### `noUnused`
 
 Type: `Boolean`
+
 Default: `false`
 
 Filter out warnings related to unused variables and values.
@@ -74,6 +78,7 @@ Filter out warnings related to unused variables and values.
 #### `noRedefined`
 
 Type: `Boolean`
+
 Default: `false`
 
 Filter out warnings related to redefined variables.
@@ -83,6 +88,7 @@ Filter out warnings related to redefined variables.
 #### `noUnusedArgs`
 
 Type: `Boolean`
+
 Default: `false`
 
 Filter out warnings related to unused arguments and loop variables.
@@ -92,6 +98,7 @@ Filter out warnings related to unused arguments and loop variables.
 #### `noUnusedSecondaries`
 
 Type: `Boolean`
+
 Default: `false`
 
 Filter out warnings related to unused variables set together with used ones.
@@ -102,6 +109,7 @@ Filter out warnings related to unused variables set together with used ones.
 #### `noUnusedGlobals`
 
 Type: `Boolean`
+
 Default: `false`
 
 Filter out warnings related to set but unused global variables.
@@ -111,6 +119,7 @@ Filter out warnings related to set but unused global variables.
 #### `std`
 
 Type: `String`
+
 Default: `_G`
 
 Set [standard globals](
@@ -133,6 +142,7 @@ one of:
 #### `globals`
 
 Type: `Array of Strings`
+
 Default: `[]`
 
 Add custom globals on top of standard ones.
@@ -142,6 +152,7 @@ Add custom globals on top of standard ones.
 #### `readGlobals`
 
 Type: `Array of Strings`
+
 Default: `[]`
 
 Add custom read-only globals on top of standard ones.
@@ -151,6 +162,7 @@ Add custom read-only globals on top of standard ones.
 #### `newGlobals`
 
 Type: `Array of Strings`
+
 Default: `[]`
 
 Set custom globals. Removes custom globals added previously.
@@ -160,6 +172,7 @@ Set custom globals. Removes custom globals added previously.
 #### `newReadGlobals`
 
 Type: `Array of Strings`
+
 Default: `[]`
 
 Set read-only globals. Removes read-only globals added previously.
@@ -169,6 +182,7 @@ Set read-only globals. Removes read-only globals added previously.
 #### `compat`
 
 Type: `Boolean`
+
 Default: `false`
 
 Equivalent to `{"std": "max"}`.
@@ -178,6 +192,7 @@ Equivalent to `{"std": "max"}`.
 #### `allowDefined`
 
 Type: `Boolean`
+
 Default: `false`
 
 Allow defining globals implicitly by setting them.
@@ -189,6 +204,7 @@ http://luacheck.readthedocs.org/warnings.html#implicitly-defined-globals)
 #### `allowDefinedTop`
 
 Type: `Boolean`
+
 Default: `false`
 
 Allow defining globals implicitly by setting them in the top level scope.
@@ -200,6 +216,7 @@ http://luacheck.readthedocs.org/warnings.html#implicitly-defined-globals)
 #### `module`
 
 Type: `Boolean`
+
 Default: `false`
 
 Limit visibility of implicitly defined globals to their files.
@@ -210,6 +227,7 @@ Limit visibility of implicitly defined globals to their files.
 #### `ignore`
 
 Type: `Array of Strings`
+
 Default: `[]`
 
 Filter out warnings matching patterns.
@@ -220,6 +238,7 @@ Filter out warnings matching patterns.
 #### `enable`
 
 Type: `Array of Strings`
+
 Default: `[]`
 
 Do not filter out warnings matching patterns.
@@ -230,6 +249,7 @@ Do not filter out warnings matching patterns.
 #### `only`
 
 Type: `Array of Strings`
+
 Default: `[]`
 
 Filter out warnings not matching patterns.
@@ -240,6 +260,7 @@ Filter out warnings not matching patterns.
 #### `noInline`
 
 Type: `Boolean`
+
 Default: `false`
 
 Disable inline options.
@@ -249,6 +270,7 @@ Disable inline options.
 #### `config`
 
 Type: `String`
+
 Default: `undefined`
 
 Path to custom [config file](http://luacheck.readthedocs.org/config.html)
@@ -257,6 +279,7 @@ Path to custom [config file](http://luacheck.readthedocs.org/config.html)
 #### `noConfig`
 
 Type: `Boolean`
+
 Default: `false`
 
 Flag indicating whether config loading should be disabled or not. Pass in
@@ -268,6 +291,7 @@ options via the CLI.
 #### `cache`
 
 Type: `String`
+
 Default: `undefined`
 
 Path to cache file. (default: `.luacheckcache`).
@@ -276,6 +300,7 @@ Path to cache file. (default: `.luacheckcache`).
 #### `noCache`
 
 Type: `Boolean`
+
 Default: `true`
 
 Do not use cache. Defaults to `true` in order to work without `LuaFileSystem`.
@@ -284,6 +309,7 @@ Do not use cache. Defaults to `true` in order to work without `LuaFileSystem`.
 ### `jobs`
 
 Type: `Integer (Strictly Positive)`
+
 Default: `1`
 
 Check `jobs` files in parallel. Requires `LuaLanes`. Defaults to `1` in order
@@ -292,7 +318,8 @@ to work without it.
 ## Known Issues
 
 Q: Help, I'm getting a `The input line is too long` error message on Windows.
-A: This is a th Windows](https://support.microsoft.com/en-us/kb/830473)
+
+A: This is a [known issue](https://support.microsoft.com/en-us/kb/830473)
    on all versions of Windows. Switch to using config files and it's highly
    unlikely that you'll hit the limit again.
 
