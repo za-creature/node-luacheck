@@ -40,7 +40,7 @@ luacheck = (filename, options = {}) ->
     if child.error
         throw child.error
 
-    regexp = /^(.+)\:(\d+)\:(\d+)\:\s*\((W\d+)\)\s*(.+)$/
+    regexp = /^(.+)\:(\d+)\:(\d+)\:\s*\(([EW]\d+)\)\s*(.+)$/
     for line in child.stdout.split(/\r?\n/)
         match = regexp.exec(line)
         if match
