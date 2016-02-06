@@ -1,39 +1,39 @@
 FLAGS = {
-    "noGlobal": "no-global"
-    "noUnused": "no-unused"
-    "noRedefined": "no-redefined"
-    "noUnusedArgs": "no-unused-args"
-    "noUnusedSecondaries": "no-unused-secondaries"
-    "noUnusedGlobals": "no-unused-globals"
-    "compat": "compat"
-    "allowDefined": "allow-defined"
-    "allowDefinedTop": "allow-defined-top"
-    "module": "module"
-    "noInline": "no-inline"
-    "noConfig": "no-config"
-    "noCache": "no-cache"
+    noGlobal: "no-global"
+    noUnused: "no-unused"
+    noRedefined: "no-redefined"
+    noUnusedArgs: "no-unused-args"
+    noUnusedSecondaries: "no-unused-secondaries"
+    noUnusedGlobals: "no-unused-globals"
+    compat: "compat"
+    allowDefined: "allow-defined"
+    allowDefinedTop: "allow-defined-top"
+    module: "module"
+    noInline: "no-inline"
+    noConfig: "no-config"
+    noCache: "no-cache"
 }
 
 
 SIMPLE = {
-    "std": "std"
-    "config": "config"
-    "cache": "cache"
+    std: "std"
+    config: "config"
+    cache: "cache"
 }
 
 
 MULTIPLE = {
-    "globals": "globals"
-    "readGlobals": "read-globals"
-    "newGlobals": "new-globals"
-    "newReadGlobals": "new-read-globals"
-    "ignore": "ignore"
-    "enable": "enable"
-    "only": "only"
+    globals: "globals"
+    readGlobals: "read-globals"
+    newGlobals: "new-globals"
+    newReadGlobals: "new-read-globals"
+    ignore: "ignore"
+    enable: "enable"
+    only: "only"
 }
 
 
-module.exports = (options) ->
+module.exports = (options = {}) ->
     args = []
 
     for key of FLAGS

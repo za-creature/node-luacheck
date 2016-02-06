@@ -6,7 +6,7 @@ fs = require "fs"
 path = require "path"
 
 
-luacheck = (filename, options={}) ->
+luacheck = (filename, options = {}) ->
     if typeof filename isnt "string"
         throw new Error("Please pass in a filename")
     if not fs.existsSync(filename)
@@ -28,7 +28,7 @@ luacheck = (filename, options={}) ->
         cwd = path.dirname(filename)
 
     args = [
-        path.resolve('.', filename),
+        path.resolve(".", filename),
         "--quiet",
         "--codes",
         "--no-color",
