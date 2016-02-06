@@ -43,11 +43,11 @@ module.exports = (options = {}) ->
     for own key of SIMPLE
         if options[key]
             args.push("--#{SIMPLE[key]}")
-            args.push(options[key])
+            args.push(String(options[key]))
 
-    if options.jobs and options.jobs > 1
+    if options.jobs and Number(options.jobs) > 1
         args.push("--jobs")
-        args.push(options.jobs)
+        args.push(String(options.jobs))
 
     for own key of MULTIPLE
         if options[key] and options[key].length
