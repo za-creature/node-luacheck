@@ -15,13 +15,26 @@ npm install luacheck
 
 ## Usage
 
-```javascript
+### Synchronous API
 
+```js
 var luacheck = require("luacheck");
 
-var errors = luacheck(sourceFilename, options);
+try {
+    var errors = luacheck(sourceFilename, {sync: true});
+    // do something with `errors`
+}
+catch(err) {}
+```
 
-console.log(errors); // or `luacheck.errors` for the most recent invocation
+### Asynchronous API
+
+```js
+var luacheck = require("luacheck");
+
+luacheck(sourceFilename, options, function(err, errors) {
+    // do something with `errors`
+});
 ```
 
 ## Options
@@ -29,6 +42,18 @@ console.log(errors); // or `luacheck.errors` for the most recent invocation
 The `options` argument is a dictionary that accepts the following keys:
 
 ### Options added by `node-luacheck`:
+
+#### `sync`
+
+Type: `Boolean`
+
+Default: `false`
+
+Whether to run the subprocess asynchronously (default) or wait for it to exit
+before returning (only supported in Node.Js 0.12+). A standard (err, result)
+continuation is expected as the last argument if running asynchronously. When
+running synchronously, errors are thrown and the results (i.e. luacheck errors)
+are returned.
 
 #### `cwd`
 
@@ -41,8 +66,8 @@ around some weird `.luacheckrc` behavior in [older versions of luacheck](
 https://github.com/mpeterv/luacheck/issues/33). If this is not what you want,
 you can override the working directory by passing a path to this parameter.
 
-**WARNING**: source filenames are resolved relative to the current process' working
-directory, not `cwd`.
+**WARNING**: source filenames are resolved relative to the current process'
+working directory, not `cwd`.
 
 #### `exec`
 
