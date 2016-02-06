@@ -3,6 +3,7 @@ LuacheckError = require "./Error"
 
 subprocess = require "child_process"
 fs = require "fs"
+os = require "os"
 path = require "path"
 
 
@@ -15,11 +16,13 @@ luacheck = (filename, options = {}) ->
     luacheck.errors = []
 
     # figure out what to run
-    exec = "luacheck"
-    if options.exec
-        exec = path.resolve(options.exec, exec)
-    if process.platform is "win32"
-        exec += ".bat"
+    
+    if options.exec?
+        exec = options.exec
+    else
+        exec = "luacheck"
+        if os.platform() is "win32"
+            exec += ".bat"
 
     # figure out where to run it from
     if options.cwd

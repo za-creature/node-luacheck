@@ -48,10 +48,10 @@ directory, not `cwd`.
 
 Type: `String`
 
-Default: `undefined`
+Default: `luacheck` (or `luacheck.bat` on Windows)
 
-If set, it should be a directory that contains `luacheck` (or `luacheck.bat` on
-Windows). Useful if for whatever reason you can't have it added to your `PATH`.
+The path to the luacheck binary. Useful if for whatever reason you can't have
+it added to your `PATH`.
 
 ### Options passed directly to `luacheck`:
 
