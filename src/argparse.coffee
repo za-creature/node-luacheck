@@ -50,9 +50,12 @@ module.exports = (options = {}) ->
         args.push(String(options.jobs))
 
     for own key of MULTIPLE
-        if options[key] and options[key].length
+        if options[key]
             args.push("--#{MULTIPLE[key]}")
-            for value in options[key]
-                args.push(value)
+            if options[key] instanceof Array
+                for value in options[key]
+                    args.push(String(value))
+            else
+                args.push(String(options[key]))
 
     args
