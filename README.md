@@ -132,7 +132,7 @@ Type: `Boolean`
 Default: `false`
 
 Filter out warnings related to unused variables set together with used ones.
-[See Secondary values and variables](http://luacheck.readthedocs.org/warnings.html#secondaryvaluesandvariables).
+[See Secondary values and variables](http://luacheck.readthedocs.org/en/0.11.0/warnings.html#secondaryvaluesandvariables).
 
 **DEPRECATED**: use `unused_secondaries` in a `.luacheckrc` file instead.
 
@@ -153,7 +153,7 @@ Type: `String`
 Default: `_G`
 
 Set [standard globals](
-http://luacheck.readthedocs.org/warnings.html#global-variables) to use. Must be
+http://luacheck.readthedocs.org/en/0.11.0/warnings.html#global-variables) to use. Must be
 one of:
 
 * `_G` - globals of the Lua interpreter luacheck runs on (default);
@@ -227,7 +227,7 @@ Default: `false`
 
 Allow defining globals implicitly by setting them.
 [See Implicitly defined globals](
-http://luacheck.readthedocs.org/warnings.html#implicitly-defined-globals)
+http://luacheck.readthedocs.org/en/0.11.0/warnings.html#implicitly-defined-globals)
 
 **DEPRECATED**: use `allow_defined` in a `.luacheckrc` file instead.
 
@@ -239,7 +239,7 @@ Default: `false`
 
 Allow defining globals implicitly by setting them in the top level scope.
 [See Implicitly defined globals](
-http://luacheck.readthedocs.org/warnings.html#implicitly-defined-globals)
+http://luacheck.readthedocs.org/en/0.11.0/warnings.html#implicitly-defined-globals)
 
 **DEPRECATED**: use `allow_defined_top` in a `.luacheckrc` file instead.
 
@@ -250,7 +250,7 @@ Type: `Boolean`
 Default: `false`
 
 Limit visibility of implicitly defined globals to their files.
-[See Modules](http://luacheck.readthedocs.org/warnings.html#modules)
+[See Modules](http://luacheck.readthedocs.org/en/0.11.0/warnings.html#modules)
 
 **DEPRECATED**: use `module` in a `.luacheckrc` file instead.
 
@@ -261,7 +261,7 @@ Type: `Array of Strings`
 Default: `[]`
 
 Filter out warnings matching patterns.
-[See Patterns](http://luacheck.readthedocs.org/cli.html#patterns)
+[See Patterns](http://luacheck.readthedocs.org/en/0.11.0/cli.html#patterns)
 
 **DEPRECATED**: use `ignore` in a `.luacheckrc` file instead.
 
@@ -272,7 +272,7 @@ Type: `Array of Strings`
 Default: `[]`
 
 Do not filter out warnings matching patterns.
-[See Patterns](http://luacheck.readthedocs.org/cli.html#patterns)
+[See Patterns](http://luacheck.readthedocs.org/en/0.11.0/cli.html#patterns)
 
 **DEPRECATED**: use `enable` in a `.luacheckrc` file instead.
 
@@ -283,7 +283,7 @@ Type: `Array of Strings`
 Default: `[]`
 
 Filter out warnings not matching patterns.
-[See Patterns](http://luacheck.readthedocs.org/cli.html#patterns)
+[See Patterns](http://luacheck.readthedocs.org/en/0.11.0/cli.html#patterns)
 
 **DEPRECATED**: use `only` in a `.luacheckrc` file instead.
 
@@ -303,7 +303,7 @@ Type: `String`
 
 Default: `undefined`
 
-Path to custom [config file](http://luacheck.readthedocs.org/config.html)
+Path to custom [config file](http://luacheck.readthedocs.org/en/0.11.0/config.html)
 (default: `.luacheckrc`).
 
 #### `noConfig`
@@ -325,7 +325,7 @@ Type: `String`
 Default: `undefined`
 
 Path to cache file. (default: `.luacheckcache`).
-[See Caching](http://luacheck.readthedocs.org/cli.html#cache)
+[See Caching](http://luacheck.readthedocs.org/en/0.11.0/cli.html#cache)
 
 #### `noCache`
 
@@ -334,7 +334,7 @@ Type: `Boolean`
 Default: `true`
 
 Do not use cache. Defaults to `true` in order to work without `LuaFileSystem`.
-[See Caching](http://luacheck.readthedocs.org/cli.html#cache)
+[See Caching](http://luacheck.readthedocs.org/en/0.11.0/cli.html#cache)
 
 ### `jobs`
 
