@@ -20,8 +20,9 @@
   "main": "lib",
   "scripts": {
     "prepublish": "coffee -o lib -c src",
+    "lint": "coffeelint src/",
     "test": "mocha",
-    "test-all": "mocha test/",
+    "test-all": "mocha --reporter mocha-junit-reporter test/",
     "coverage": "istanbul report"
   },
   "files": [
@@ -38,8 +39,10 @@
     "coffeelint-limit-newlines": "0.0.2",
     "coffeelint-no-code-after-return": "0.0.3",
     "coffeelint-prefer-double-quotes": "^0.1.0",
+    "coveralls": "^2.11.6",
     "istanbul": "^0.4.2",
     "mocha": "^2.4.5",
+    "mocha-junit-reporter": "^1.9.1",
     "proxyquire": "^1.7.4"
   },
   "engines": {
