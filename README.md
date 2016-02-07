@@ -1,5 +1,10 @@
 # node-luacheck
 
+[![Circle CI](https://circleci.com/gh/za-creature/node-luacheck/tree/master.svg?style=shield)](https://circleci.com/gh/za-creature/node-luacheck/tree/master)
+[![Dependencies](https://david-dm.org/za-creature/node-luacheck.svg)](https://david-dm.org/za-creature/node-luacheck)
+[![Dev Dependencies](https://david-dm.org/za-creature/node-luacheck/dev-status.svg)](https://david-dm.org/za-creature/node-luacheck#info=devDependencies)
+[![Coverage Status](https://coveralls.io/repos/github/za-creature/node-luacheck/badge.svg?branch=master)](https://coveralls.io/github/za-creature/node-luacheck?branch=master)
+
 Node.JS bindings for [luacheck](https://github.com/mpeterv/luacheck).
 
 ## Dependencies
