@@ -1,6 +1,6 @@
 {
   "name": "luacheck",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "luacheck bindings for Node.JS",
   "keywords": [
     "luacheck",
